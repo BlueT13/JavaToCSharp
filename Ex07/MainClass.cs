@@ -18,8 +18,11 @@ namespace Ex07
             //IrregularArray irregularArray = new IrregularArray();
             //irregularArray.PrintIrregularArray();
 
-            ReturnArray returnArray = new ReturnArray();
-            returnArray.PrintReturnArray();
+            //ReturnArray returnArray = new ReturnArray();
+            //returnArray.PrintReturnArray();
+
+            Calc calc = new Calc();
+            calc.PrintCalc(args);
         }
     }
 }
