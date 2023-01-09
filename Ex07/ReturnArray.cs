@@ -17,7 +17,7 @@ namespace Ex07
         public void PrintReturnArray()
         {
             int[] intArray;
-            intArray= makeArray();
+            intArray = makeArray(); //intArray에 temp배열의 시작 주소값(&[0])을 대입
             for(int i = 0; i<intArray.Length; i++)
                 Console.Write(intArray[i] + " ");
             Console.WriteLine();
