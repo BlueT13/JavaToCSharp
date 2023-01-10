@@ -21,8 +21,14 @@ namespace Ex07
             //ReturnArray returnArray = new ReturnArray();
             //returnArray.PrintReturnArray();
 
-            Calc calc = new Calc();
-            calc.PrintCalc(args);
+            //Calc calc = new Calc();
+            //calc.PrintCalc(args);
+
+            //BarChart barChart = new BarChart();
+            //barChart.PrintBarChar();
+
+            TestAverage testAverage = new TestAverage();
+            testAverage.PrintTestAverage();
         }
     }
 }
