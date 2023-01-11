@@ -27,8 +27,11 @@ namespace Ex07
             //BarChart barChart = new BarChart();
             //barChart.PrintBarChar();
 
-            TestAverage testAverage = new TestAverage();
-            testAverage.PrintTestAverage();
+            //TestAverage testAverage = new TestAverage();
+            //testAverage.PrintTestAverage();
+
+            Ex07_1 ex07_1 = new Ex07_1();
+            ex07_1.PrintEx07_1();
         }
     }
 }
