@@ -16,8 +16,15 @@ namespace Ex09
 		{
 			Rectangle rect = new Rectangle();
 			Console.Write(">> ");
-			rect.width = Convert.ToInt32(Console.ReadLine());
-			rect.height= Convert.ToInt32(Console.ReadLine());
+			string input = Console.ReadLine();
+			string[] str = input.Split(" ");
+			int[] inputInts = new int[str.Length];
+			for(int i = 0; i < str.Length; i++)
+			{
+				inputInts[i] = Convert.ToInt32(str[i]);
+			}
+			rect.width = inputInts[0];
+			rect.height = inputInts[1];
 			Console.WriteLine("Area: " + rect.GetArea());
 		}
 	}
