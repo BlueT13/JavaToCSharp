@@ -6,8 +6,11 @@ namespace Ex09
 	{
 		static void Main()
 		{
-			Circle circle = new Circle();
-			circle.PrintCircle();
+			//Circle circle = new Circle();
+			//circle.PrintCircle();
+
+			Rectangle rectangle = new Rectangle();
+			rectangle.PrintRectangle();
 		}
 	}
 }
