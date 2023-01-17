@@ -5,7 +5,7 @@ namespace Ex09
 {
 	internal class Ex09_2
 	{
-		public void PrintEx09_2()
+		public void Ex09_2_Score()
 		{
 			int[] scores = new int[50];
 			double sum = 0;
@@ -20,9 +20,8 @@ namespace Ex09
 			Console.WriteLine();
 			Console.Write("Average: {0:N2}\n", sum / scores.Length);
 
-			string[] scoreRange = {"100", "99-90", "89-80", "79-70", "69-60", "59-50",
-				"49-40", "39-30", "29-20","19-10","09-00"};
-			int[] count = new int[scoreRange.Length];
+			const int SCORE_RANGE_LENGTH = 100 / 10 + 1;
+			int[] count = new int[SCORE_RANGE_LENGTH];
 
 			for (int i = 0; i < scores.Length; i++)
 			{
@@ -63,7 +62,9 @@ namespace Ex09
 						break;
 				}
 			}
-			string star = "*";
+
+			string[] scoreRange = {"100", "99-90", "89-80", "79-70", "69-60", "59-50",
+				"49-40", "39-30", "29-20","19-10","09-00"};
 			for (int i = 0; i < scoreRange.Length; i++)
 			{
 				Console.Write("{0,5}: {1} ", scoreRange[i], count[i]);

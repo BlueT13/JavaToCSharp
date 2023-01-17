@@ -4,15 +4,14 @@ namespace Ex09
 {
 	internal class Ex09_1
 	{
-		public void PrintEx09_1()
+		public void Ex09_1_Dice()
 		{
-			int[] dice = new int[6000];
 			int[] count = new int[6];
 			Random random = new Random();
-			for(int i =0; i < 6000; i++)
+			for (int i = 0; i < 6000; i++)
 			{
-				dice[i] = 1 + random.Next(6);
-				switch(dice[i])
+				int dice_number = 1 + random.Next(6);
+				switch (dice_number)
 				{
 					case 1:
 						count[0]++;
@@ -34,10 +33,10 @@ namespace Ex09
 						break;
 				}
 			}
-			int[] numbers = new int[6] { 1, 2, 3, 4, 5, 6 };
-			for(int i = 0; i<6; i++)
+
+			for (int i = 0; i < 6; i++)
 			{
-				Console.WriteLine(numbers[i]+": " + count[i]);
+				Console.WriteLine((i + 1) + ": " + count[i]);
 			}
 		}
 	}

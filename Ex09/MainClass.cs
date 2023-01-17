@@ -19,10 +19,10 @@ namespace Ex09
 			//randomIntegers.PrintRandomIntegers();
 
 			//Ex09_1 ex09_1 = new Ex09_1();
-			//ex09_1.PrintEx09_1();
+			//ex09_1.Ex09_1_Dice();
 
 			Ex09_2 ex09_2 = new Ex09_2();
-			ex09_2.PrintEx09_2();
+			ex09_2.Ex09_2_Score();
 		}
 	}
 }
