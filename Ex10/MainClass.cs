@@ -27,8 +27,10 @@ namespace Ex10
 			//Circle4 circle4 = new Circle4();
 			//circle4.PrintCircle4();
 
-			CircleArray circleArray = new CircleArray();
-			circleArray.PrintCircleArray();
+			//CircleArray circleArray = new CircleArray();
+			//circleArray.PrintCircleArray();
+
+			AlarmTimeMainClass.AlarmTimeMain();
 		}
 	}
 }
