@@ -6,7 +6,19 @@ namespace Ex11
 	{
 		private static void Main()
 		{
-			ValuePassing.PrintValue();
+			//ValuePassing.PrintValue();
+
+			//ReferencePassing.PrintPizzaRadius();
+
+			//ArrayPassing.PrintArray();
+
+			//ArrayParameterEx.ArrayParameterExMainMethod();
+
+			//MethodSample.PrintMethodSample();
+
+			//TimeTest.PrintTimeTest();
+
+			DateTest.PrintDateTest();
 		}
 	}
 }
