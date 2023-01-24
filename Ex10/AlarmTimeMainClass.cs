@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Ex10
 {
@@ -49,7 +50,30 @@ namespace Ex10
 					int alarmNum;
 					Console.Write("설정할 알람번호를 입력하시오: ");
 					alarmNum = Convert.ToInt32(Console.ReadLine());
-					alarmTimes[alarmNum - 1].IsActive();
+					if (alarmTimes[alarmNum - 1] != null)
+					{
+						Console.Write("활성화 또는 비활성화를 입력하시오: ");
+						string activeCheck = Console.ReadLine();
+
+						if (activeCheck == "활성화")
+						{
+							alarmTimes[alarmNum - 1].SetActive(true);
+							Console.WriteLine("알람이 활성화됐습니다.");
+						}
+						else if (activeCheck == "비활성화")
+						{
+							alarmTimes[alarmNum - 1].SetActive(false);
+							Console.WriteLine("알람이 비활성화됐습니다.");
+						}
+						else
+						{
+							Console.WriteLine("틀린 명령어입니다. \"활성화\" 또는 \"비활성화\"를 입력하시오.");
+						}
+					}
+					else
+					{
+						Console.WriteLine("알람이 존재하지 않습니다.");
+					}
 				}
 				else if (menuIndex == 4)
 				{

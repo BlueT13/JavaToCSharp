@@ -21,22 +21,12 @@ namespace Ex10
 
 		public bool IsActive()
 		{
-			string activeCheck = Console.ReadLine();
-			if (activeCheck == "활성화")
-			{
-				Console.WriteLine("알람이 활성화됐습니다.");
-				active = true;
-			}
-			else if (activeCheck == "비활성화")
-			{
-				Console.WriteLine("알람이 비활성화됐습니다.");
-				active = false;
-			}
-			else
-			{
-				Console.WriteLine("틀린 명령어입니다. \"활성화\" 또는 \"비활성화\"를 입력하시오.");
-			}
 			return active;
+		}
+
+		public void SetActive(bool flag)
+		{
+			active = flag;
 		}
 
 		public int GetHour()
