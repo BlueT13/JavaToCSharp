@@ -10,9 +10,9 @@ namespace Ex11
 
 		public Date(int month, int day, int year)
 		{
-			this.day = CheckDay(day);
 			this.month = CheckMonth(month);
 			this.year = year;
+			this.day = CheckDay(day);
 		}
 
 		private int CheckMonth(int testMonth)
@@ -32,7 +32,7 @@ namespace Ex11
 			{
 				return testDay;
 			}
-			if (month == 2 && testDay == 29 && (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)))
+			else if (month == 2 && testDay == 29 && (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)))
 			{
 				return testDay;
 			}
@@ -50,7 +50,7 @@ namespace Ex11
 		public static void PrintDateTest()
 		{
 			Date date1 = new Date(3, 1, 2018);
-			Date date2 = new Date(2, 28, 2022);
+			Date date2 = new Date(2, 29, 2024);
 
 			Console.WriteLine("Entrace date: " + date1.ToString());
 			Console.WriteLine("Graduation date: " + date2.ToString());
