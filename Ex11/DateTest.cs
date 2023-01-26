@@ -37,23 +37,35 @@ namespace Ex11
 				return testDay;
 			}
 			else
-				return 1;
+				return 1;	
 		}
 
 		public string ToString()
 		{
 			return month + "/" + day + "/" + year;
 		}
+
+		public void Increase()
+		{
+			day++;
+			for(int i =0; i< month; i++)
+			{
+
+			}
+		}
 	}
 	internal class DateTest
 	{
 		public static void PrintDateTest()
 		{
-			Date date1 = new Date(3, 1, 2018);
-			Date date2 = new Date(2, 29, 2024);
+			Date date = new Date(1, 1, 2020);
+			Console.WriteLine("Graduation date: " + date.ToString());
 
-			Console.WriteLine("Entrace date: " + date1.ToString());
-			Console.WriteLine("Graduation date: " + date2.ToString());
+			for(int  i = 0; i < 800; i++) 
+			{
+				date.Increase();
+				Console.WriteLine(date.ToString());
+			}
 		}
 	}
 }
