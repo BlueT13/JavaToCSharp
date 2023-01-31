@@ -6,7 +6,17 @@ namespace Ex12
 	{
 		private static void Main()
 		{
-			Ex.StaticSampleMain();
+			//Ex.StaticSampleMain();
+
+			//EmployeeTest.PrintEmployee();
+
+			//MathTest.PrintMathTest();
+
+			//CalcEx.PrintCalcEx();
+
+			//CurrencyConverterTest.Converting();
+
+			QuadraticFormulaMainClass.Answer();
 		}
 	}
 }
