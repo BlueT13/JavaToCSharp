@@ -2,11 +2,13 @@
 
 namespace Ex13
 {
-	internal class MainClass
+	public class MainClass
 	{
 		private static void Main()
 		{
-			ColorPointEx.Print();
+			//ColorPointEx.Print();
+
+			InheritanceEx.PrintStudentInfo();
 		}
 	}
 }
