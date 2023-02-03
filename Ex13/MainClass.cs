@@ -8,7 +8,15 @@ namespace Ex13
 		{
 			//ColorPointEx.Print();
 
-			InheritanceEx.PrintStudentInfo();
+			//InheritanceEx.PrintStudentInfo();
+
+			//ConstructorEx.PrintConstructorEx();
+
+			//ConstructorEx2.PrintConstructorEx2();
+
+			//ConstructorEx3.PrintConstructorEx3();
+
+			Ex13_1.ConstructorEx4.PrintConstructorEx4();
 		}
 	}
 }
