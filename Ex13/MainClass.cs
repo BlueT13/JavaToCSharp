@@ -16,7 +16,9 @@ namespace Ex13
 
 			//ConstructorEx3.PrintConstructorEx3();
 
-			Ex13_1.ConstructorEx4.PrintConstructorEx4();
+			//Ex13_1.ConstructorEx4.PrintConstructorEx4();
+
+			Ex13_1.SuperEx.PrintSuperEx();
 		}
 	}
 }
