@@ -22,7 +22,10 @@ namespace Ex13
 
 			//Ex13_2.ThisAndSuper.PrintThisAndSuper();
 
-			CarEx1.CarEx_NoInheritance.PrintCarEx_NoInheritance();
+			//CarEx1.CarEx_NoInheritance.PrintCarEx_NoInheritance();
+
+			CarEx2.CarEx_Inheritance.PrintCarEx_Inheritance();
+
 		}
 	}
 }
