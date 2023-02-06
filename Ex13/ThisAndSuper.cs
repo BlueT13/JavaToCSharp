@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Ex13_1
+namespace Ex13_2
 {
 	class A
 	{
-		public A()
+		public A() : this(0)
 		{
 			Console.WriteLine("A");
 		}
@@ -16,7 +16,7 @@ namespace Ex13_1
 
 	class B : A
 	{
-		public B()
+		public B() : this(0)
 		{
 			Console.WriteLine("B");
 		}
@@ -25,11 +25,12 @@ namespace Ex13_1
 			Console.WriteLine("B" + x);
 		}
 	}
-	internal class ConstructorEx4
+
+	internal class ThisAndSuper
 	{
-		public static void PrintConstructorEx4()
+		public static void PrintThisAndSuper()
 		{
-			B b = new B(5);
+			B b = new B();
 		}
 	}
 }

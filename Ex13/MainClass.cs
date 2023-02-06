@@ -18,7 +18,11 @@ namespace Ex13
 
 			//Ex13_1.ConstructorEx4.PrintConstructorEx4();
 
-			Ex13_1.SuperEx.PrintSuperEx();
+			//Ex13_1.SuperEx.PrintSuperEx();
+
+			//Ex13_2.ThisAndSuper.PrintThisAndSuper();
+
+			CarEx1.CarEx_NoInheritance.PrintCarEx_NoInheritance();
 		}
 	}
 }
