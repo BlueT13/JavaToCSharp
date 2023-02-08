@@ -6,7 +6,11 @@ namespace Ex14
 	{
 		public static void Main()
 		{
-			UpCastingEx.PrintUpCastingEx();
+			//UpCastingEx.PrintUpCastingEx();
+
+			//DownCastingEx.PrintDownCastingEx();
+
+			Ex14_1.IsEx.PrintIsEx();
 		}
 	}
 }
