@@ -10,7 +10,9 @@ namespace Ex14
 
 			//DownCastingEx.PrintDownCastingEx();
 
-			Ex14_1.IsEx.PrintIsEx();
+			//Ex14_1.IsEx.PrintIsEx();
+
+			MethodOverridingEx.PrintMethodOverridingEx();
 		}
 	}
 }

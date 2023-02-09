@@ -14,7 +14,7 @@ namespace Ex14_1
 		{
 			if(p is Person)
 			{
-				Console.Write("Persone ");
+				Console.Write("Person ");
 			}
 			if(p is Student)
 			{
