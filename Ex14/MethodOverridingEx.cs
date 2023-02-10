@@ -8,7 +8,6 @@ namespace Ex14
 		public Shape() { next = null; }
 
 		// 메서드를 오버라이딩 할 때 부모 클래스에서는 virtual 로, 자식 클래스에서는 override 키워드로 메서드를 정의
-		// 부모 클래스에 virtual 를 미정의 시, 자식 클래스에서 메소드 앞에 new를 붙이면 된다.
 		public virtual void Draw()
 		{
 			Console.WriteLine("Shape");
