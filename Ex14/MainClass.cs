@@ -12,7 +12,9 @@ namespace Ex14
 
 			//Ex14_1.IsEx.PrintIsEx();
 
-			MethodOverridingEx.PrintMethodOverridingEx();
+			//MethodOverridingEx.PrintMethodOverridingEx();
+
+			UsingOverride.PrintUsingOverride();
 		}
 	}
 }
