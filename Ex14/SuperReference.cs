@@ -1,33 +1,35 @@
 ﻿using System;
 
-namespace Ex14_1
+namespace Ex14_2
 {
 	class Shape
 	{
 		protected string name;
-
 		public void Paint()
 		{
 			Draw();
 		}
-
 		public virtual void Draw()
 		{
-			Console.WriteLine("Shape");
+			Console.WriteLine(name);
 		}
 	}
 
 	class Circle : Shape
 	{
+		protected string name;
 		public override void Draw()
 		{
-			Console.WriteLine("Circle");
+			name = "circle";
+			base.name = "shape";
+			base.Draw();
+			Console.WriteLine(name);
 		}
 	}
 
-	public class DynamicBinding
+	internal class SuperReference
 	{
-		public static void DynamicBindingMainMethod()
+		public static void SuperReferenceMainMethod()
 		{
 			Shape b = new Circle();
 			b.Paint();

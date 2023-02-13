@@ -14,9 +14,11 @@ namespace Ex14
 
 			//MethodOverridingEx.PrintMethodOverridingEx();
 
-			UsingOverride.PrintUsingOverride();
+			//UsingOverride.PrintUsingOverride();
 
-			//Ex14_1.DynamicBinding.DynamicBindingMainClass();
+			//Ex14_1.DynamicBinding.DynamicBindingMainMethod();
+
+			Ex14_2.SuperReference.SuperReferenceMainMethod();
 		}
 	}
 }
