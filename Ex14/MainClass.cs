@@ -18,7 +18,9 @@ namespace Ex14
 
 			//Ex14_1.DynamicBinding.DynamicBindingMainMethod();
 
-			Ex14_2.SuperReference.SuperReferenceMainMethod();
+			//Ex14_2.SuperReference.SuperReferenceMainMethod();
+
+			EmployeeTest.EmployeeTestMainMethod();
 		}
 	}
 }
