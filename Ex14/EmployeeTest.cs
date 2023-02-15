@@ -43,12 +43,13 @@ namespace Ex14
 
 		public override double Earnings()
 		{
-			return 0;
+			return monthlySalary;
 		}
 
 		public override string ToString()
 		{
-			return base.ToString();
+			return base.ToString() + "\n" +
+				"monthly salary: " + String.Format("{0:0.0}", monthlySalary);
 		}
 	}
 
@@ -65,12 +66,14 @@ namespace Ex14
 
 		public override double Earnings()
 		{
-			return 0;
+			return wage * hours;
 		}
 
 		public override string ToString()
 		{
-			return "??";
+			return base.ToString() + "\n" +
+				"wage: " + String.Format("{0:0.0}", wage) + "\n" +
+				"hours: " + String.Format("{0:0.0}", hours);
 		}
 	}
 
@@ -87,12 +90,14 @@ namespace Ex14
 
 		public override double Earnings()
 		{
-			return 0;
+			return grossSales * commissionRate;
 		}
 
 		public override string ToString()
 		{
-			return "??";
+			return base.ToString() + "\n" +
+				"gross sales: " + String.Format("{0:0.0}", grossSales) + "\n" +
+				"commission rate: " + String.Format("{0:0.##}", commissionRate);
 		}
 	}
 
@@ -106,12 +111,13 @@ namespace Ex14
 		}
 		public override double Earnings()
 		{
-			return 0;
+			return base.Earnings() + baseSalary;
 		}
 
 		public override string ToString()
 		{
-			return "??";
+			return base.ToString() + "\n" +
+				"base salary: " + String.Format("{0:0.0}", baseSalary);
 		}
 	}
 
@@ -129,12 +135,12 @@ namespace Ex14
 			foreach (Employee e in arr)
 			{
 				Console.WriteLine(e.ToString());
-				Console.WriteLine("payment: " + e.Earnings());
+				Console.WriteLine("payment: " + String.Format("{0:0.0}", e.Earnings()));
 				Console.WriteLine();
 				sum += e.Earnings();
 			}
 			Console.WriteLine("Total employees: " + Employee.GetCount());
-			Console.WriteLine("Total payment: " + sum);
+			Console.WriteLine("Total payment: " + String.Format("{0:0.0}", sum));
 		}
 	}
 }
