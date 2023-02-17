@@ -6,7 +6,9 @@ namespace Ex15
 	{
 		public static void Main()
 		{
-			GoodCalc.GoodCalcMainMethod();
+			//GoodCalc.GoodCalcMainMethod();
+
+			InterfaceEx.InterfaceExMainMethod();
 		}
 	}
 }
