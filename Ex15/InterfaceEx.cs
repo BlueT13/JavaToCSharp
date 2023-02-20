@@ -7,10 +7,7 @@ namespace Ex15
 		const int TIMEOUT = 1000;
 		void SendCall();
 		void ReceiveCall();
-		public void PrintLogo()
-		{
-			Console.WriteLine("** Phone **");
-		}
+		void PrintLogo();
 	}
 
 	class SamsungPhone : PhoneInterface
@@ -25,6 +22,11 @@ namespace Ex15
 			Console.WriteLine("You got a call");
 		}
 
+		public void PrintLogo()
+		{
+			Console.WriteLine("** Phone **");
+		}
+
 		public void Flash()
 		{
 			Console.WriteLine("Light is on");
@@ -36,7 +38,7 @@ namespace Ex15
 		public static void InterfaceExMainMethod()
 		{
 			SamsungPhone phone = new SamsungPhone();
-			//phone.PrintLogo();
+			phone.PrintLogo();
 			phone.SendCall();
 			phone.ReceiveCall();
 			phone.Flash();
