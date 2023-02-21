@@ -8,7 +8,9 @@ namespace Ex15
 		{
 			//GoodCalc.GoodCalcMainMethod();
 
-			InterfaceEx.InterfaceExMainMethod();
+			//InterfaceEx.InterfaceExMainMethod();
+
+			Ex15_1.InterfaceEx2.InterfaceEx2MainMethod();
 		}
 	}
 }
