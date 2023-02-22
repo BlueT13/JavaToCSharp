@@ -10,7 +10,9 @@ namespace Ex15
 
 			//InterfaceEx.InterfaceExMainMethod();
 
-			Ex15_1.InterfaceEx2.InterfaceEx2MainMethod();
+			//Ex15_1.InterfaceEx2.InterfaceEx2MainMethod();
+
+			EmployeeTest.EmployeeTestMainMethod();
 		}
 	}
 }
