@@ -75,7 +75,7 @@ namespace Ex15_1
 
 	internal class InterfaceEx2
 	{
-		public static void InterfaceEx2MainMethod()
+		public static void InterfaceEx2_MainMethod()
 		{
 			SmartPhone phone = new SmartPhone();
 			phone.PrintLogo();

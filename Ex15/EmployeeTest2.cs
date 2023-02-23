@@ -1,8 +1,46 @@
 ﻿using System;
 
-namespace Ex15
+namespace Ex15_1
 {
-	abstract class Employee
+	interface Payable
+	{
+		double GetPaymentAmount();
+	}
+
+	class Invoice : Payable
+	{
+		private string description;
+		private int quantity;
+		private double price;
+		private static int count = 0;
+
+		public Invoice(string description, int quantity, double price)
+		{
+			this.description = description;
+			this.quantity = quantity;
+			this.price = price;
+			count++;
+		}
+
+		public double GetPaymentAmount()
+		{
+			return quantity * price;
+		}
+
+		public override string ToString()
+		{
+			return description + "\n"
+				+ "quantity: " + String.Format("{0:0}", quantity) + "\n"
+				+ "price: " + String.Format("{0:0,0}", price);
+		}
+
+		public static int GetCount()
+		{
+			return count;
+		}
+	}
+
+	abstract class Employee : Payable
 	{
 		private string name;
 		private string id;
@@ -15,7 +53,7 @@ namespace Ex15
 			count++;
 		}
 
-		public abstract double Earnings();
+		public abstract double GetPaymentAmount();
 
 		public override string ToString()
 		{
@@ -37,7 +75,7 @@ namespace Ex15
 			monthlySalary = salary;
 		}
 
-		public override double Earnings()
+		public override double GetPaymentAmount()
 		{
 			return monthlySalary;
 		}
@@ -45,7 +83,7 @@ namespace Ex15
 		public override string ToString()
 		{
 			return base.ToString() + "\n" +
-				"monthly salary: " + String.Format("{0:0.0}", monthlySalary);
+				"monthly salary: " + String.Format("{0:0}", monthlySalary);
 		}
 	}
 
@@ -60,7 +98,7 @@ namespace Ex15
 			this.hours = hours;
 		}
 
-		public override double Earnings()
+		public override double GetPaymentAmount()
 		{
 			return wage * hours;
 		}
@@ -68,8 +106,8 @@ namespace Ex15
 		public override string ToString()
 		{
 			return base.ToString() + "\n"
-				+ "wage: " + String.Format("{0:0.0}", wage) + "\n"
-				+ "hours: " + String.Format("{0:0.0}", hours);
+				+ "wage: " + String.Format("{0:0}", wage) + "\n"
+				+ "hours: " + String.Format("{0:0}", hours);
 		}
 	}
 
@@ -84,7 +122,7 @@ namespace Ex15
 			commissionRate = rate;
 		}
 
-		public override double Earnings()
+		public override double GetPaymentAmount()
 		{
 			return commissionRate * grossSales;
 		}
@@ -92,7 +130,7 @@ namespace Ex15
 		public override string ToString()
 		{
 			return base.ToString() + "\n"
-				+ "gross sales: " + String.Format("{0:0.0}", grossSales) + "\n"
+				+ "gross sales: " + String.Format("{0:0,0}", grossSales) + "\n"
 				+ "commission rate: " + String.Format("{0:0.##}", commissionRate);
 		}
 	}
@@ -106,38 +144,41 @@ namespace Ex15
 			baseSalary = salary;
 		}
 
-		public override double Earnings()
+		public override double GetPaymentAmount()
 		{
-			return baseSalary + base.Earnings();
+			return baseSalary + base.GetPaymentAmount();
 		}
 
 		public override string ToString()
 		{
 			return base.ToString() + "\n"
-				+ "base salary: " + String.Format("{0:0.0}", baseSalary);
+				+ "base salary: " + String.Format("{0:0}", baseSalary);
 		}
 	}
 
-	internal class EmployeeTest
+	internal class EmployeeTest2
 	{
-		public static void EmployeeTest_MainMethod()
+		public static void EmployeeTest2_MainMethod()
 		{
-			Employee[] arr = new Employee[4];
+			Payable[] arr = new Payable[6];
 			arr[0] = new SalariedEmployee("Smith", "s1111", 300);
 			arr[1] = new HourlyEmployee("Karen", "h2222", 1, 160);
 			arr[2] = new CommissionEmployee("Jones", "c3333", 2000, 0.1);
 			arr[3] = new BasePlusCommissionEmployee("Lewis", "b4444", 2000, 0.06, 100);
+			arr[4] = new Invoice("seat", 2, 30000);
+			arr[5] = new Invoice("tire", 4, 80000);
 
 			double sum = 0.0;
-			foreach (Employee e in arr)
+			foreach (Payable e in arr)
 			{
 				Console.WriteLine(e.ToString());
-				Console.WriteLine("payment: " + String.Format("{0:0.0}", e.Earnings()));
+				Console.WriteLine("payment: {0:0,0}", e.GetPaymentAmount());
 				Console.WriteLine();
-				sum += e.Earnings();
+				sum += e.GetPaymentAmount();
 			}
-			Console.WriteLine("Total employees: " + Employee.GetCount());
-			Console.WriteLine("Total payment: " + String.Format("{0:0.0}", sum));
+			Console.WriteLine("Total employees: {0}", Employee.GetCount());
+			Console.WriteLine("Total invoices: {0}", Invoice.GetCount());
+			Console.WriteLine("Total payment: {0:0,0}", sum);
 		}
 	}
 }

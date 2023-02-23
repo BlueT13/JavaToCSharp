@@ -35,7 +35,7 @@ namespace Ex15
 
 	internal class InterfaceEx
 	{
-		public static void InterfaceExMainMethod()
+		public static void InterfaceEx_MainMethod()
 		{
 			SamsungPhone phone = new SamsungPhone();
 			phone.PrintLogo();

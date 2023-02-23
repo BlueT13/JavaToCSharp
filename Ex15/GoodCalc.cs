@@ -31,7 +31,7 @@ namespace Ex15
 			return sum / a.Length;
 		}
 
-		public static void GoodCalcMainMethod()
+		public static void GoodCalc_MainMethod()
 		{
 			GoodCalc c = new GoodCalc();
 			Console.WriteLine(c.Add(2, 3));

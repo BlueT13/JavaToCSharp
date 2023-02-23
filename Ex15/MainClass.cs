@@ -6,13 +6,15 @@ namespace Ex15
 	{
 		public static void Main()
 		{
-			//GoodCalc.GoodCalcMainMethod();
+			//GoodCalc.GoodCalc_MainMethod();
 
-			//InterfaceEx.InterfaceExMainMethod();
+			//InterfaceEx.InterfaceEx_MainMethod();
 
-			//Ex15_1.InterfaceEx2.InterfaceEx2MainMethod();
+			//Ex15_1.InterfaceEx2.InterfaceEx2_MainMethod();
 
-			EmployeeTest.EmployeeTestMainMethod();
+			//EmployeeTest.EmployeeTest_MainMethod();
+
+			Ex15_1.EmployeeTest2.EmployeeTest2_MainMethod();
 		}
 	}
 }
